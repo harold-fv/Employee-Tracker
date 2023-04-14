@@ -255,3 +255,84 @@ async function promptUpdateEmployeeManager() {
   mainMenu();
 }
 
+
+// Define a function to prompt the user for a manager's details
+// and display the employees managed by the selected manager
+async function promptViewEmployeesByManager() {
+  const managers = await queries.getManagers();
+
+  const { managerId } = await inquirer.prompt([
+    {
+      type: "list",
+      name: "managerId",
+      message: "Select the manager to view their employees:",
+      choices: managers.map((manager) => ({
+        name: `${manager.first_name} ${manager.last_name}`,
+        value: manager.id,
+      })),
+    },
+  ]);
+
+  await queries.viewEmployeesByManager(managerId);
+  mainMenu();
+}
+
+// Define a function to prompt the user for a department's details
+// and display the employees belonging to the selected department
+async function promptViewEmployeesByDepartment() {
+  const departments = await queries.getDepartments();
+
+  const { departmentId } = await inquirer.prompt([
+    {
+      type: "list",
+      name: "departmentId",
+      message: "Select the department to view its employees:",
+      choices: departments.map((department) => ({
+        name: department.name,
+        value: department.id,
+      })),
+    },
+  ]);
+
+  await queries.viewEmployeesByDepartment(departmentId);
+  mainMenu();
+}
+// Define a function to prompt the user for a department's details
+// and delete the department along with its associated roles
+async function promptDeleteDepartment() {
+  const departments = await queries.getDepartments();
+  const departmentChoices = departments.map((dept) => ({
+    name: dept.name,
+    value: dept.id,
+  }));
+
+  const { departmentId } = await inquirer.prompt([
+    {
+      type: "list",
+      name: "departmentId",
+      message: "Select the department to delete:",
+      choices: departmentChoices,
+    },
+  ]);
+
+  const confirmDelete = await inquirer.prompt([
+    {
+      type: "confirm",
+      name: "confirm",
+      message: "Are you sure you want to delete this department?",
+      default: false,
+    },
+  ]);
+
+  if (confirmDelete.confirm) {
+    const rolesToDelete = await queries.getRolesByDepartment(departmentId);
+    for (const role of rolesToDelete) {
+      await queries.deleteRole(role.id);
+    }
+    await queries.deleteDepartment(departmentId);
+  }
+
+  mainMenu();
+}
+
+
