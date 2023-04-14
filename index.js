@@ -189,3 +189,69 @@ async function promptAddEmployee() {
   await queries.addEmployee(firstName, lastName, roleId, managerId);
   mainMenu();
 }
+
+
+// Define a function to prompt the user for employee and new role details
+// and update the employee's role in the database
+async function promptUpdateEmployeeRole() {
+  const employees = await queries.getEmployees();
+  const roles = await queries.getRoles();
+
+  const { employeeId, newRoleId } = await inquirer.prompt([
+    {
+      type: "list",
+      name: "employeeId",
+      message: "Select the employee to update:",
+      choices: employees.map((employee) => ({
+        name: `${employee.first_name} ${employee.last_name}`,
+        value: employee.id,
+      })),
+    },
+    {
+      type: "list",
+      name: "newRoleId",
+      message: "Select the new role for the employee:",
+      choices: roles.map((role) => ({
+        name: role.title,
+        value: role.id,
+      })),
+    },
+  ]);
+
+  await queries.updateEmployeeRole(employeeId, newRoleId);
+  mainMenu();
+}
+
+// Define a function to prompt the user for employee and new manager details
+// and update the employee's manager in the database
+async function promptUpdateEmployeeManager() {
+  const employees = await queries.getEmployees();
+
+  const { employeeId, newManagerId } = await inquirer.prompt([
+    {
+      type: "list",
+      name: "employeeId",
+      message: "Select the employee to update:",
+      choices: employees.map((employee) => ({
+        name: `${employee.first_name} ${employee.last_name}`,
+        value: employee.id,
+      })),
+    },
+    {
+      type: "list",
+      name: "newManagerId",
+      message: "Select the new manager for the employee:",
+      choices: [
+        { name: "None", value: null },
+        ...employees.map((employee) => ({
+          name: `${employee.first_name} ${employee.last_name}`,
+          value: employee.id,
+        })),
+      ],
+    },
+  ]);
+
+  await queries.updateEmployeeManager(employeeId, newManagerId);
+  mainMenu();
+}
+
