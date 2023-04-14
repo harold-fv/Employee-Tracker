@@ -44,9 +44,9 @@ Git clone https://github.com/harold-fv/Employee-Tracker.
 
 Next, run the following on the command line, 
 
-npm init -y
-npm i inquirer@8.2.4
-npm i mysql 
+npm init -y ,
+npm i inquirer@8.2.4 ,
+npm i mysql ,
 npm i console.table.
 
 After you install the package ,from the command line type node index.js to run the program.
