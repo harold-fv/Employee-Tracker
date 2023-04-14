@@ -104,6 +104,22 @@ async addDepartment(name) {
 }
 
 
+// Define a method to add a new role to the database
+async addRole(title, salary, departmentId) {
+  const connection = await this.getConnection();
+  const [result] = await connection.query("INSERT INTO role SET ?", {
+    title: title,
+    salary: salary,
+    department_id: departmentId,
+  });
+  connection.end();
+
+  console.log("Role added successfully.");
+  return result;
+}
+
+
+
 
 
 
