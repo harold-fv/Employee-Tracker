@@ -59,9 +59,9 @@ After you install the package ,from the command line type node index.js to run t
 
 2. The system will be presented with the following options.
 
-view all departments, 
-view all roles, 
-view all employees,
+view departments, 
+view roles, 
+view employees,
 add a department, 
 add a role, 
 add an employee, 
