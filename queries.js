@@ -12,7 +12,6 @@ class Queries {
     return await mysql.createConnection(this.config);
   }
 
-  
     // Define a method to view all departments in the database
     async viewDepartments() {
       
@@ -40,7 +39,6 @@ async viewDepartmentBudget(departmentId) {
   return rows;
 }
 
-
   // Define a method to view all roles in the database
   async viewRoles() {
     const connection = await this.getConnection();
@@ -52,7 +50,6 @@ async viewDepartmentBudget(departmentId) {
     console.table(rows);
     return rows;
   }
-
   
     // Define a method to view all employees in the database
     async viewEmployees() {
@@ -65,7 +62,6 @@ async viewDepartmentBudget(departmentId) {
       console.table(rows);
       return rows;
     }
-
     
    // Define a method to view employees by a specific department
 async viewEmployeesByDepartment(departmentId) {
@@ -80,7 +76,6 @@ async viewEmployeesByDepartment(departmentId) {
   return rows;
 }
 
-
 // Define a method to view employees by a specific manager
 async viewEmployeesByManager(managerId) {
   const connection = await this.getConnection();
@@ -94,7 +89,6 @@ async viewEmployeesByManager(managerId) {
   return rows;
 }
 
-
 // Define a method to add a new department to the database
 async addDepartment(name) {
   const connection = await this.getConnection();
@@ -106,7 +100,6 @@ async addDepartment(name) {
   console.log("Department added successfully.");
   return result;
 }
-
 
 // Define a method to add a new role to the database
 async addRole(title, salary, departmentId) {
@@ -121,7 +114,6 @@ async addRole(title, salary, departmentId) {
   console.log("Role added successfully.");
   return result;
 }
-
 
 // Define a method to add a new employee to the database
 async addEmployee(firstName, lastName, roleId, managerId) {
