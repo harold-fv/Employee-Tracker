@@ -132,4 +132,4 @@ https://github.com/harold-fv/Employee-Tracker/blob/main/Employee-Tracker-Video-D
 
 • The included image demonstrates the application functionality:
 
-The Employee Tracker program is a simple program that allows the user to easily view and manage the company's employee database. A simple application that helps track the employee records such as the names, title, department, salary and the employee's manager.
+The Employee Tracker program is a program that allows the user to easily view and manage the company's employee database. An application that helps track the employee records such as the names, title, department, salary and the employee's manager in order to simply organize and plan the business.
