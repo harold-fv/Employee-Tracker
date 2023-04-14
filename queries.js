@@ -15,7 +15,11 @@ class Queries {
   
     // Define a method to view all departments in the database
     async viewDepartments() {
+      
+    // create the connection
       const connection = await this.getConnection();
+      
+      //   // query database
       const [rows] = await connection.query("SELECT * FROM department");
       connection.end();
   
