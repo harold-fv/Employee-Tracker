@@ -98,3 +98,94 @@ async function mainMenu() {
   }
 }
 
+
+// Define a function to prompt the user for department details
+// and add a new department to the database
+async function promptAddDepartment() {
+  const { name } = await inquirer.prompt([
+    {
+      type: "input",
+      name: "name",
+      message: "Enter the department name:",
+    },
+  ]);
+
+  await queries.addDepartment(name);
+  mainMenu();
+}
+
+// Define a function to prompt the user for role details
+// and add a new role to the database
+async function promptAddRole() {
+  const departments = await queries.getDepartments();
+
+  const { title, salary, departmentId } = await inquirer.prompt([
+    {
+      type: "input",
+      name: "title",
+      message: "Enter the role title:",
+    },
+    {
+      type: "input",
+      name: "salary",
+      message: "Enter the role salary:",
+      validate: (input) => (isNaN(input) ? "Please enter a number." : true),
+    },
+    {
+      type: "list",
+      name: "departmentId",
+      message: "Select the department for the role:",
+      choices: departments.map((department) => ({
+        name: department.name,
+        value: department.id,
+      })),
+    },
+  ]);
+
+  await queries.addRole(title, salary, departmentId);
+  mainMenu();
+}
+
+// Define a function to prompt the user for employee details
+// and add a new employee to the database
+async function promptAddEmployee() {
+  const roles = await queries.getRoles();
+  const employees = await queries.getEmployees();
+
+  const { firstName, lastName, roleId, managerId } = await inquirer.prompt([
+    {
+      type: "input",
+      name: "firstName",
+      message: "Enter the employee's first name:",
+    },
+    {
+      type: "input",
+      name: "lastName",
+      message: "Enter the employee's last name:",
+    },
+    {
+      type: "list",
+      name: "roleId",
+      message: "Select the employee's role:",
+      choices: roles.map((role) => ({
+        name: role.title,
+        value: role.id,
+      })),
+    },
+    {
+      type: "list",
+      name: "managerId",
+      message: "Select the employee's manager:",
+      choices: [
+        { name: "None", value: null },
+        ...employees.map((employee) => ({
+          name: `${employee.first_name} ${employee.last_name}`,
+          value: employee.id,
+        })),
+      ],
+    },
+  ]);
+
+  await queries.addEmployee(firstName, lastName, roleId, managerId);
+  mainMenu();
+}
