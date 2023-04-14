@@ -22,7 +22,7 @@ class Queries {
      // query database
       const [rows] = await connection.query("SELECT * FROM department");
       connection.end();
-  
+  //display data in a tabular format
       console.table(rows);
       return rows;
     }
