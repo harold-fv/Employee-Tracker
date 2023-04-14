@@ -85,7 +85,7 @@ and update an employee role
 
 ![image](https://user-images.githubusercontent.com/120603153/232170252-f94045fe-bd05-4630-abb8-b065bd486b6e.png)
 
-7. When a user chooses to add a role, then the system will prompt to enter the name, salary, and department for the role and that role is added to the database.
+7. When a user chooses to add a role, then the system will prompt to enter the role title, salary, and department for the role and that role is added to the database.
 
 ![image](https://user-images.githubusercontent.com/120603153/232170346-61eea28b-cb95-4d09-a65e-ca92e5c13711.png)
 
