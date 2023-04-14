@@ -71,54 +71,65 @@ and update an employee role
 
 3. When a user chooses to view all departments then the system will  present with a formatted table showing department names and department ids.
 
-![image](https://user-images.githubusercontent.com/120603153/232168517-7f959c2f-fbbd-4ab8-8cbe-6c3a5d394ce8.png)
+![image](https://user-images.githubusercontent.com/120603153/232170081-6498de2f-d3ec-4a64-b861-edea7ab817ce.png)
 
 4. When a user views all roles, then the system will present with the job title, role id, the department that role belongs to, and the salary for that role.
 
-![image](https://user-images.githubusercontent.com/120603153/232168764-6b68c88d-29c1-47ed-a35d-4e9efda15360.png)
+![image](https://user-images.githubusercontent.com/120603153/232170156-c2c007c8-9588-46b0-b69d-e5c717ad7835.png)
 
 5. When a user chooses to view all employees, then the system will present with a formatted table showing employee data, including employee ids, first names, last names, job titles, departments, salaries, and managers that the employees report to.
 
-![image](https://user-images.githubusercontent.com/120603153/232168876-720c29aa-9e7b-4e2f-969e-b06dabeba85c.png)
+![image](https://user-images.githubusercontent.com/120603153/232170196-d6524f98-f3a5-4daf-8cea-b8473de285ea.png)
 
 6. When a user chooses to add a department,then the system will prompt to enter the name of the department and that department is added to the database.
 
-![image](https://user-images.githubusercontent.com/120603153/232169010-fd100c50-1a6c-4f93-b76f-b5919011b555.png)
+![image](https://user-images.githubusercontent.com/120603153/232170252-f94045fe-bd05-4630-abb8-b065bd486b6e.png)
 
 7. When a user chooses to add a role, then the system will prompt to enter the name, salary, and department for the role and that role is added to the database.
 
-![image](https://user-images.githubusercontent.com/120603153/232169142-af978682-cf0b-4fcd-91d9-f2bbb349e4e6.png)
+![image](https://user-images.githubusercontent.com/120603153/232170346-61eea28b-cb95-4d09-a65e-ca92e5c13711.png)
 
 8. When a user chooses to add an employee, then the system will prompt to enter the employee’s first name, last name, role, and manager, and that employee is added to the database.
 
-![image](https://user-images.githubusercontent.com/120603153/232169277-e6feea7b-9987-4c3e-ad10-1b67949bd7e9.png)
+![image](https://user-images.githubusercontent.com/120603153/232170401-bbcdb367-dc08-4cf6-a50e-05b7a753f209.png)
 
 9. When a user chooses to update an employee role, then the system will prompt to select an employee to update and their new role and this information is updated in the database.
 
-![image](https://user-images.githubusercontent.com/120603153/232169364-65383fbb-7411-4acf-9cd9-008ebc83b509.png)
+![image](https://user-images.githubusercontent.com/120603153/232170515-b7d7aa2d-dd86-4506-9138-e3088963eee3.png)
 
 10. When a user chooses to update the employee Managers, then the system will 
 
+![image](https://user-images.githubusercontent.com/120603153/232170594-8d28fc14-8048-4274-9183-a33b78021ed3.png)
 
+11. When a user chooses to view the employees by manager, then the system will prompt to select the manager to view their employees.
 
+![image](https://user-images.githubusercontent.com/120603153/232170767-d57032ea-8e34-4a9a-a000-985ad6f61a66.png)
 
+12. When a user chooses to view employees by department, then the system will prompt to select the department to view its employees.
 
+ ![image](https://user-images.githubusercontent.com/120603153/232170908-9de3bfcc-398d-4f3d-9b3d-a3fe3a73f444.png)
 
+13. When a user chooses to delete departments, then the system will prompt to select the department to delete and will prompt again the user to confirm to delete the chosen department.
 
+![image](https://user-images.githubusercontent.com/120603153/232171091-b93fd8c1-c081-4ee1-bb24-6027466378ed.png)
 
+![image](https://user-images.githubusercontent.com/120603153/232171126-838849bc-b1ad-4738-adf1-e0856397f7b9.png)
 
+14. When a user chooses to delete a role, then the system will prompt to select the role to delete. Once the system finds it in the database, it will proceed on deletion and will notify the user that the role has been deleted successfuly.
 
+![image](https://user-images.githubusercontent.com/120603153/232171288-48b2c1a3-a43b-4b88-afa8-4b9699d2a538.png)
 
+15. When a user chooses to delete an employee, then the system will prompt to select the employee to delete. Once it's deleted, the system will notify the user that the employee has been deleted successfuly.
 
+![image](https://user-images.githubusercontent.com/120603153/232171464-c140ba4f-4908-45ca-b5f8-5e530bcd1a39.png)
 
+16. When a user chooses to view the total utilized budget of a department, in other words, the combined salaries of all employees in that department, then the system will prompt to select the department to view its budget.
 
+![image](https://user-images.githubusercontent.com/120603153/232171571-b859b0e7-433c-40d7-9243-2870aae348bc.png)
 
-
-
-
-Walkthrough Video
+# Walkthrough Video
 https://github.com/harold-fv/Employee-Tracker/blob/main/Employee-Tracker-Video-Demo.gif
 
 • The included image demonstrates the application functionality:
 
-The Employee Tracker program allows you to easily view and interact with information stored in databases.
+The Employee Tracker program is a simple program that allows the user to easily view and manage the company's employee database. A simple application that helps track the employee records such as the names, title, department, salary and the employee's manager.
