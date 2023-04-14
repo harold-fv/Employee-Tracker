@@ -336,3 +336,67 @@ async function promptDeleteDepartment() {
 }
 
 
+// Define a function to prompt the user for a role's details
+// and delete the role from the database
+async function promptDeleteRole() {
+  const roles = await queries.getRoles();
+
+  const { roleId } = await inquirer.prompt([
+    {
+      type: "list",
+      name: "roleId",
+      message: "Select the role to delete:",
+      choices: roles.map((role) => ({
+        name: role.title,
+        value: role.id,
+      })),
+    },
+  ]);
+
+  await queries.deleteRole(roleId);
+  mainMenu();
+}
+// Define a function to prompt the user for an employee's details
+// and delete the employee from the database
+async function promptDeleteEmployee() {
+  const employees = await queries.getEmployees();
+
+  const { employeeId } = await inquirer.prompt([
+    {
+      type: "list",
+      name: "employeeId",
+      message: "Select the employee to delete:",
+      choices: employees.map((employee) => ({
+        name: `${employee.first_name} ${employee.last_name}`,
+        value: employee.id,
+      })),
+    },
+  ]);
+
+  await queries.deleteEmployee(employeeId);
+  mainMenu();
+}
+// Define a function to prompt the user for a department's details
+// and display the total budget (salary) of the selected department
+async function promptViewDepartmentBudget() {
+  const departments = await queries.getDepartments();
+
+  const { departmentId } = await inquirer.prompt([
+    {
+      type: "list",
+      name: "departmentId",
+      message: "Select the department to view its budget:",
+      choices: departments.map((department) => ({
+        name: department.name,
+        value: department.id,
+      })),
+    },
+  ]);
+
+  await queries.viewDepartmentBudget(departmentId);
+  mainMenu();
+}
+
+mainMenu();
+
+
