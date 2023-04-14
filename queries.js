@@ -91,6 +91,20 @@ async viewEmployeesByManager(managerId) {
 }
 
 
+// Define a method to add a new department to the database
+async addDepartment(name) {
+  const connection = await this.getConnection();
+  const [result] = await connection.query("INSERT INTO department SET ?", {
+    name: name,
+  });
+  connection.end();
+
+  console.log("Department added successfully.");
+  return result;
+}
+
+
+
 
 
 
