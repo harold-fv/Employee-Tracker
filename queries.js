@@ -19,7 +19,7 @@ class Queries {
     // create the connection
       const connection = await this.getConnection();
       
-      //   // query database
+     // query database
       const [rows] = await connection.query("SELECT * FROM department");
       connection.end();
   
