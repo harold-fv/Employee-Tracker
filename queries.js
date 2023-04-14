@@ -23,4 +23,16 @@ class Queries {
       return rows;
     }
 
-    
+// Define a method to view the total budget (salary) of a specific department
+async viewDepartmentBudget(departmentId) {
+  const connection = await this.getConnection();
+  const [rows] = await connection.query(
+    "SELECT department.id, department.name, SUM(role.salary) AS budget FROM employee LEFT JOIN role ON employee.role_id = role.id LEFT JOIN department ON role.department_id = department.id WHERE department.id = ? GROUP BY department.id",
+    [departmentId]
+  );
+  connection.end();
+
+  console.table(rows);
+  return rows;
+}
+
