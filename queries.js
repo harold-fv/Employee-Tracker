@@ -36,3 +36,18 @@ async viewDepartmentBudget(departmentId) {
   return rows;
 }
 
+
+  // Define a method to view all roles in the database
+  async viewRoles() {
+    const connection = await this.getConnection();
+    const [rows] = await connection.query(
+      "SELECT role.id, role.title, role.salary, department.name AS department FROM role LEFT JOIN department ON role.department_id = department.id"
+    );
+    connection.end();
+
+    console.table(rows);
+    return rows;
+  }
+
+
+  
