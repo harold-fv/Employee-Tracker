@@ -97,7 +97,7 @@ and update an employee role
 
 ![image](https://user-images.githubusercontent.com/120603153/232170515-b7d7aa2d-dd86-4506-9138-e3088963eee3.png)
 
-10. When a user chooses to update the employee Managers, then the system will 
+10. When a user chooses to update the employee Managers, then the system will prompt to select the employee to update and the new manager for the employee.
 
 ![image](https://user-images.githubusercontent.com/120603153/232170594-8d28fc14-8048-4274-9183-a33b78021ed3.png)
 
@@ -109,17 +109,17 @@ and update an employee role
 
  ![image](https://user-images.githubusercontent.com/120603153/232170908-9de3bfcc-398d-4f3d-9b3d-a3fe3a73f444.png)
 
-13. When a user chooses to delete departments, then the system will prompt to select the department to delete and will prompt again the user to confirm to delete the chosen department.
+13. When a user chooses to delete departments, then the system will prompt to select the department to delete, then it will prompt again to confirm to delete the chosen department. Once the systems deletes the department, it will notify the user that the department deleted successfuly.
 
 ![image](https://user-images.githubusercontent.com/120603153/232171091-b93fd8c1-c081-4ee1-bb24-6027466378ed.png)
 
 ![image](https://user-images.githubusercontent.com/120603153/232171126-838849bc-b1ad-4738-adf1-e0856397f7b9.png)
 
-14. When a user chooses to delete a role, then the system will prompt to select the role to delete. Once the system finds it in the database, it will proceed on deletion and will notify the user that the role has been deleted successfuly.
+14. When a user chooses to delete a role, then the system will prompt to select the role to delete. Once the system finds it in the database, it will proceed on deletion and will notify the user that the role deleted successfuly.
 
 ![image](https://user-images.githubusercontent.com/120603153/232171288-48b2c1a3-a43b-4b88-afa8-4b9699d2a538.png)
 
-15. When a user chooses to delete an employee, then the system will prompt to select the employee to delete. Once it's deleted, the system will notify the user that the employee has been deleted successfuly.
+15. When a user chooses to delete an employee, then the system will prompt to select the employee to delete. Once it's deleted, the system will notify the user that the employee deleted successfuly.
 
 ![image](https://user-images.githubusercontent.com/120603153/232171464-c140ba4f-4908-45ca-b5f8-5e530bcd1a39.png)
 
