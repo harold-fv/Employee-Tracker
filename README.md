@@ -81,11 +81,11 @@ and update an employee role
 
 ![image](https://user-images.githubusercontent.com/120603153/232170196-d6524f98-f3a5-4daf-8cea-b8473de285ea.png)
 
-6. When a user chooses to add a department,then the system will prompt to enter the name of the department and that department is added to the database.
+6. When a user chooses to add a department,then the system will prompt to enter the name of the department. The system will generate the request and that department is added to the database.
 
 ![image](https://user-images.githubusercontent.com/120603153/232170252-f94045fe-bd05-4630-abb8-b065bd486b6e.png)
 
-7. When a user chooses to add a role, then the system will prompt to enter the role title, salary, and department for the role and that role is added to the database.
+7. When a user chooses to add a role, then the system will prompt to enter the role title, salary, and department for the role. The system will generate the request and that role is added to the database.
 
 ![image](https://user-images.githubusercontent.com/120603153/232170346-61eea28b-cb95-4d09-a65e-ca92e5c13711.png)
 
@@ -93,11 +93,11 @@ and update an employee role
 
 ![image](https://user-images.githubusercontent.com/120603153/232170401-bbcdb367-dc08-4cf6-a50e-05b7a753f209.png)
 
-9. When a user chooses to update an employee role, then the system will prompt to select an employee to update and their new role and this information is updated in the database.
+9. When a user chooses to update an employee role, then the system will prompt to select an employee to update and their new role. The system will generate the request and this information is updated in the database.
 
 ![image](https://user-images.githubusercontent.com/120603153/232170515-b7d7aa2d-dd86-4506-9138-e3088963eee3.png)
 
-10. When a user chooses to update the employee Managers, then the system will prompt to select the employee to update and the new manager for the employee.
+10. When a user chooses to update the employee Manager, then the system will prompt to select the employee to update and the manager for that employee. The system will generate the request and a new manager for that employee has been updated in the database.
 
 ![image](https://user-images.githubusercontent.com/120603153/232170594-8d28fc14-8048-4274-9183-a33b78021ed3.png)
 
