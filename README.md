@@ -89,7 +89,7 @@ and update an employee role
 
 ![image](https://user-images.githubusercontent.com/120603153/232170346-61eea28b-cb95-4d09-a65e-ca92e5c13711.png)
 
-8. When a user chooses to add an employee, then the system will prompt to enter the employee’s first name, last name, role, and manager, and that employee is added to the database.
+8. When a user chooses to add an employee, then the system will prompt to enter the employee’s first name, last name, role, and the employee's manager. The system will generate the request and the employee is added to the database.
 
 ![image](https://user-images.githubusercontent.com/120603153/232170401-bbcdb367-dc08-4cf6-a50e-05b7a753f209.png)
 
